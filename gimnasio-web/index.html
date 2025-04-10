@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLADIADOR GYM</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
+      <h1>GLADIADOR GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        
+        <li class="has-submenu">
+          <a href="#">Servicios</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+            <a href="precios.html">Precios</a>
+          </div>
+        </li>
+  
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog Fitness</a></li>
+      </ul>
+      <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <!-- <div class="video-bg">
+        <iframe 
+          src="https://www.youtube.com/embed/WWbVthx_7e0?autoplay=1&mute=1&loop=1&playlist=WWbVthx_7e0"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      </div> -->
+     <video autoplay loop>
+      <source src="assets/video/entrenamiento.mp4" type="video/mp4">
+      Tu navegador no soporta el video.
+    </video> 
+    <div class="overlay">
+        <div class="overlay-texto">
+            <h2>¡Entrená con los mejores!</h2>
+            <p>Motivación, fuerza y disciplina</p>
+          </div>
+    </div>
+  </section>
+
+  <!-- CLASES DESTACADAS -->
+  <section class="clases-destacadas">
+    <h2>Nuestras Clases</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="assets/img/yoga.jpg" alt="Clase de Yoga">
+        <h3>Yoga</h3>
+      </div>
+      <div class="card">
+        <img src="assets/img/crossfit.jpg" alt="Clase de Crossfit">
+        <h3>Crossfit</h3>
+      </div>
+      <div class="card">
+        <img src="assets/img/boxeo.jpg" alt="Clase de Boxeo">
+        <h3>Boxeo</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTADOR ANIMADO -->
+  <section class="contador">
+    <div><span class="numero">500+</span><p>Socios Satisfechos</p></div>
+    <div><span class="numero">10</span><p>Años de Experiencia</p></div>
+    <div><span class="numero">20</span><p>Entrenadores Certificados</p></div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="carrusel-slider">
+        <div class="testimonio">"Excelente atención y resultados" - <strong>Ana</strong></div>
+        <div class="testimonio">"Entrenamientos personalizados de verdad" - <strong>Juan</strong></div>
+        <div class="testimonio">"El mejor gimnasio de la zona" - <strong>Lucía</strong></div>
+    </div>
+  </section>
+
+  <script src="js/style.js"></script>
+  
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu email" required>
+        <button type="button" class="button">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+    </div>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+</body>
+</html>

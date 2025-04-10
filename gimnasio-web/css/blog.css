@@ -1,0 +1,268 @@
+:root {
+    --bg-color: #f9f9f9;
+    --bg-color1:#cdcaca;
+    --text-color: #333;
+    --text-color1: #1a1a1a;
+    --header-bg: #111;
+    --card-bg: #fff;
+    --highlight: #ffcc00;
+    --footer-bg: #222;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  header {
+    background-color: var(--header-bg);
+  }
+  
+  .card {
+    background-color: var(--card-bg);
+  }
+  
+  footer {
+    background-color: var(--footer-bg);
+  }
+  
+  nav a:hover,
+  .submenu a:hover {
+    color: var(--highlight);
+  }
+
+  body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #eee;
+    --text-color1: #000000;
+    --bg-color1:#bdb6b6;
+    --header-bg: #000;
+    --card-bg: #2b2b2b;
+    --highlight: #ffa500;
+    --footer-bg: #111;
+  }
+
+  #modo-toggle {
+  margin-left: auto;
+  background: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease;
+}
+
+#modo-toggle:hover {
+  background-color: #ddd;
+}
+
+:root {
+    --bg: #fff;
+    --text: #222;
+    --primary: #4caf50;
+    --light-gray: #f5f5f5;
+    --dark: #333;
+  }
+  
+  body {
+    margin: 0;
+    font-family: sans-serif;
+   
+    color: var(--text);
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+  }
+
+  .blog {
+    text-align: center;
+  }
+
+  body.dark-mode .blog {
+    color: var(--text-color)
+  }
+
+  header {
+    padding: 0rem;
+    background: var(--primary);
+    color: white;
+  
+    scroll-snap-align: start;
+  }
+  
+  .blog-filtros {
+    padding: 2rem 1rem;
+    
+  }
+  
+  .tags {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  body.dark-mode .tags label {
+ 
+    color: var(--text-color1);
+  }
+  
+  input[type="radio"][name="tag"] {
+    display: none;
+  }
+
+  input#all:checked ~ .blog-filtros .tags label[for="all"],
+input#nutricion:checked ~ .blog-filtros .tags label[for="nutricion"],
+input#entrenamiento:checked ~ .blog-filtros .tags label[for="entrenamiento"],
+input#motivacion:checked ~ .blog-filtros .tags label[for="motivacion"],
+input#recuperacion:checked ~ .blog-filtros .tags label[for="recuperacion"] {
+  border-color: var(--primary);
+  
+}
+
+body.dark-mode input#all:checked ~ .blog-filtros .tags label[for="all"],
+body.dark-mode input#nutricion:checked ~ .blog-filtros .tags label[for="nutricion"],
+body.dark-mode input#entrenamiento:checked ~ .blog-filtros .tags label[for="entrenamiento"],
+body.dark-mode input#motivacion:checked ~ .blog-filtros .tags label[for="motivacion"],
+body.dark-mode input#recuperacion:checked ~ .blog-filtros .tags label[for="recuperacion"] {
+    border-color: var(--primary);
+ 
+    color : var(--text-color1);
+  }
+  
+  .tags label {
+    cursor: pointer;
+    background: rgb(204, 198, 198);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    
+  }
+  
+  
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  /* NUTRICIÓN */
+input#nutricion:checked ~ .blog-filtros .tags label[for="nutricion"],
+.tags label[for="nutricion"]:hover {
+  background-color: #a5d6a7; /* verde claro */
+  border-color: #66bb6a;
+  color: #1a1a1a;
+}
+
+/* ENTRENAMIENTO */
+input#entrenamiento:checked ~ .blog-filtros .tags label[for="entrenamiento"],
+.tags label[for="entrenamiento"]:hover {
+  background-color: #90caf9; /* azul claro */
+  border-color: #42a5f5;
+  color: #1a1a1a;
+}
+
+/* MOTIVACIÓN */
+input#motivacion:checked ~ .blog-filtros .tags label[for="motivacion"],
+.tags label[for="motivacion"]:hover {
+  background-color: #f48fb1; /* rosa claro */
+  border-color: #ec407a;
+  color: #1a1a1a;
+}
+
+/* RECUPERACIÓN */
+input#recuperacion:checked ~ .blog-filtros .tags label[for="recuperacion"],
+.tags label[for="recuperacion"]:hover {
+  background-color: #ffe082; /* amarillo claro */
+  border-color: #ffca28;
+  color: #1a1a1a;
+}
+
+/* TODOS */
+input#all:checked ~ .blog-filtros .tags label[for="all"],
+.tags label[for="all"]:hover {
+  background-color: #de3a3a;
+  border-color: #c22c2c;
+  color: #1a1a1a;
+}
+
+  .blog-filtros .card {
+    display: none;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    background-color: var(--bg-color1);
+    color: var(--text-color1);
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .card {
+    display: none;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 4s ease-out, transform 4s ease-out;
+   
+  }
+  
+  /* Mostrar según filtro seleccionado */
+  #all:checked ~ .blog-filtros .card,
+  #nutricion:checked ~ .blog-filtros .card.nutricion,
+  #entrenamiento:checked ~ .blog-filtros .card.entrenamiento,
+  #motivacion:checked ~ .blog-filtros .card.motivacion,
+  #recuperacion:checked ~ .blog-filtros .card.recuperacion{
+    display: block;
+  }
+  
+  .comentarios {
+    padding: 2rem;
+    background: #eee;
+  }
+  
+  .comentario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    flex-shrink: 0;
+  }
+  
+  .avatar::before {
+    content: attr(data-inicial);
+    position: absolute;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+.avatar-lucia { background: #4caf50; }
+.avatar-mateo { background: #2196f3; }
+.avatar-carla { background: #ff9800; }
+.avatar-alan { background: #9c27b0; }
+.avatar-esteban { background: #f44336; }

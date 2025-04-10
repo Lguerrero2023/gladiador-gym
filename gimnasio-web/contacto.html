@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLADIADOR GYM</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
+      <h1>GLADIADOR GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        
+        <li class="has-submenu">
+          <a href="#">Servicios</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+            <a href="precios.html">Precios</a>
+          </div>
+        </li>
+  
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog Fitness</a></li>
+      </ul>
+    </nav>
+    <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
+  </header>
+
+  <section class="contacto">
+  <h2>Formulario de Contacto</h2>
+
+  <form id="contacto" class="form-contacto">
+    <div class="full">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required minlength="3" />
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+    <div>
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" pattern="[0-9]{8,15}" required />
+    </div>
+    <div class="full">
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required minlength="10"></textarea>
+    </div>
+    <div class="full" style="text-align:center;">
+      <div class="spinner" id="spinner"></div>
+    </div>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <h3>¡Mensaje Enviado!</h3>
+      <p>Gracias por contactarte. Te responderemos pronto.</p>
+    </div>
+  </div>
+  </section>
+
+  <script src="js/contacto.js"></script>
+  <script src="js/style.js"></script>
+
+  <div style="height: 3rem;"></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu email" required>
+        <button type="button" class="button">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+    </div>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+</body>
+</html>

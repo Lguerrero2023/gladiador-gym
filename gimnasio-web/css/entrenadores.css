@@ -1,0 +1,222 @@
+:root {
+    --bg-color: #f9f9f9;
+    --bg-color1:#cdcaca;
+    --text-color: #333;
+    --text-color1: #1a1a1a;
+    --header-bg: #111;
+    --card-bg: #fff;
+    --highlight: #ffcc00;
+    --footer-bg: #222;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  header {
+    background-color: var(--header-bg);
+  }
+  
+  .card {
+    background-color: var(--card-bg);
+  }
+  
+  footer {
+    background-color: var(--footer-bg);
+  }
+  
+  nav a:hover,
+  .submenu a:hover {
+    color: var(--highlight);
+  }
+
+  body.dark-mode {
+    --bg-color: #1a1a1a;
+    --text-color: #eee;
+    --text-color1: #000000;
+    --bg-color1:#bdb6b6;
+    --header-bg: #000;
+    --card-bg: #2b2b2b;
+    --highlight: #ffa500;
+    --footer-bg: #111;
+  }
+
+  #modo-toggle {
+  margin-left: auto;
+  background: #fff;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #1a1a1a;
+  transition: background-color 0.3s ease;
+}
+
+#modo-toggle:hover {
+  background-color: #ddd;
+}
+
+.entrenador {
+    width: 300px;
+    margin: 1.5rem;
+    perspective: 1000px;
+  }
+
+  .entrenadores-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* o space-around / space-between si querés más separación */
+    gap: 0.5rem;
+  padding: 1rem;
+}
+
+.entrenadores-section {
+  text-align: center;
+  padding: 2rem;
+}
+
+.entrenadores-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+
+  
+  .flip-card {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .flip-card-inner {
+    width: 100%;
+    height: 110%;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front h2,
+.flip-card-front p {
+  margin: 0.0rem 0;
+}
+
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .flip-card-front {
+    background: #b0aeae;
+    text-align: center;
+    border: #000 ;
+  }
+  body.dark-mode .flip-card-front {
+    background: #797676;
+    color: #eee;
+  }
+  
+  .flip-card-front img {
+    width: 100%;
+    border-radius: 15px;
+  }
+  
+  .flip-card-back {
+    background: #333;
+    color: white;
+    transform: rotateY(180deg);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  body.dark-mode .flip-card-back {
+    background: #9e9999;
+    color: #000;
+  }
+  
+  .habilidad {
+    margin: 1rem 0;
+  }
+  
+  .habilidad span {
+    font-size: 0.9rem;
+  }
+  
+  .barra {
+    background: #555;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 20px;
+    margin-top: 5px;
+    position: relative;
+  }
+  
+  .relleno {
+    height: 100%;
+    background: limegreen;
+    color: white;
+    text-align: right;
+    padding-right: 5px;
+    font-size: 0.8rem;
+    line-height: 20px;
+    white-space: nowrap;
+    width: 0%;
+    animation: crecer 7s ease forwards;
+  }
+  
+  @keyframes crecer {
+    from {
+      width: 0%;
+    }
+    to {
+      width: var(--final-width); 
+    }
+  }
+
+.w-90 { --final-width: 90%; }
+.w-80 { --final-width: 80%; }
+.w-70 { --final-width: 70%; }
+.w-60 { --final-width: 60%; }
+
+  .rating {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    text-align: center;
+    margin-top: 1rem;
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    transition: transform 0.2s, color 0.3s;
+    display: inline-block;
+  margin: 0 2px;
+  }
+  
+  .rating label::before {
+    content: "★";
+  }
+  
+  .rating input:checked ~ label,
+  .rating label:hover,
+  .rating label:hover ~ label {
+    color: gold;
+    transform: scale(1.1);
+  }

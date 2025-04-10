@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLADIADOR GYM</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/clases.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
+      <h1>GLADIADOR GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        
+        <li class="has-submenu">
+          <a href="#">Servicios</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+            <a href="precios.html">Precios</a>
+          </div>
+        </li>
+  
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog Fitness</a></li>
+      </ul>
+    </nav>
+    <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
+  </header>
+
+  <section class="clases">
+    <h2>Nuestras Clases</h2>
+  
+    <div class="filtros">
+      <!-- Inputs ocultos -->
+      <input type="radio" name="filtro" id="todos" checked>
+      <input type="radio" name="filtro" id="musculacion">
+      <input type="radio" name="filtro" id="crossfit">
+      <input type="radio" name="filtro" id="yoga">
+      <input type="radio" name="filtro" id="spinning">
+  
+      <!-- Etiquetas -->
+      <div class="filtro-labels">
+        <div class ="tags">
+        <label for="todos">Todos</label>
+        <label for="musculacion">Musculación</label>
+        <label for="crossfit">CrossFit</label>
+        <label for="yoga">Yoga</label>
+        <label for="spinning">Spinning</label>
+      </div>
+        </div>
+  
+      <!-- Galería tipo masonry -->
+      <div class="galeria">
+        <div class="clase musculacion">
+            <img src="assets/img/muscu1.jpg" alt="">
+            <div class="overlay">
+                <h3>Musculación</h3>
+                <p>Fortalece tu cuerpo con nuestros entrenadores</p>
+              </div>
+        </div>
+        <div class="clase crossfit">
+            <img src="assets/img/crossfit1.jpg" alt="">
+            <div class="overlay">
+                <h3>CrossFit</h3>
+                <p>Entrenamientos intensos que combinan fuerza, cardio y resistencia.</p>
+              </div>
+        </div>
+        <div class="clase yoga">
+            <img src="assets/img/yoga1.jpg" alt="">
+            <div class="overlay">
+                <h3>Yoga</h3>
+                <p>Equilibrá tu cuerpo y mente con posturas, respiración y relajación.</p>
+              </div>
+            </div>
+        <div class="clase spinning">
+            <img src="assets/img/spinning1.jpg" alt="">
+            <div class="overlay">
+                <h3>Spinning</h3>
+                <p>Pedaleá al ritmo de la música y mejorá tu resistencia cardiovascular.</p>
+              </div>
+            </div>
+        <div class="clase musculacion">
+            <img src="assets/img/muscu2.jpg" alt="">
+            <div class="overlay">Musculación</div>
+        </div>
+        <div class="clase crossfit">
+            <img src="assets/img/crossfit2.jpg" alt="">
+            <div class="overlay">CrossFit</div>
+        </div>
+        <div class="clase yoga">
+            <img src="assets/img/yoga2.jpg" alt="">
+            <div class="overlay">Yoga</div>
+        </div>
+            <div class="clase spinning">
+            <img src="assets/img/spinning4.jpg" alt="">
+        <div class="overlay">Spinning</div>
+        </div>
+        <div class="clase musculacion">
+            <img src="assets/img/muscu3.jpg" alt="">
+            <div class="overlay">Musculación</div>
+        </div>
+        <div class="clase crossfit">
+            <img src="assets/img/crossfit3.jpg" alt="">
+            <div class="overlay">CrossFit</div>
+        </div>
+        <div class="clase yoga">
+            <img src="assets/img/yoga3.jpg" alt="">
+            <div class="overlay">Yoga</div>
+        </div>
+        <div class="clase spinning">
+            <img src="assets/img/spinning3.jpg" alt="">
+            <div class="overlay">Spinning</div>
+        </div>
+        <div class="clase spinning">
+            <img src="assets/img/spinning2.jpg" alt="">
+            <div class="overlay">Spinning</div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabla de horarios -->
+<h2>Horarios Semanales</h2>
+<div class="tabla-horarios">
+  <table>
+    <thead>
+      <tr>
+        <th>Día</th>
+        <th>Musculación</th>
+        <th>CrossFit</th>
+        <th>Yoga</th>
+        <th>Spinning</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lunes</td>
+    <td>08:00 - 22:30</td>
+    <td>09:00 - 10:00 / 14:00 - 15:00 / 19:00 - 20:00</td>
+    <td>10:30 - 11:30 / 17:00 - 18:00 / 20:30 - 21:30</td>
+    <td>08:00 - 09:00 / 13:00 - 14:00 / 18:00 - 19:00</td>
+  </tr>
+  <tr>
+    <td>Martes</td>
+    <td>08:00 - 22:30</td>
+    <td>09:00 - 10:00 / 14:00 - 15:00 / 19:00 - 20:00</td>
+    <td>10:30 - 11:30 / 17:00 - 18:00 / 20:30 - 21:30</td>
+    <td>08:00 - 09:00 / 13:00 - 14:00 / 18:00 - 19:00</td>
+  </tr>
+  <tr>
+    <td>Miércoles</td>
+    <td>08:00 - 22:30</td>
+    <td>09:00 - 10:00 / 14:00 - 15:00 / 19:00 - 20:00</td>
+    <td>10:30 - 11:30 / 17:00 - 18:00 / 20:30 - 21:30</td>
+    <td>08:00 - 09:00 / 13:00 - 14:00 / 18:00 - 19:00</td>
+  </tr>
+  <tr>
+    <td>Jueves</td>
+    <td>08:00 - 22:30</td>
+    <td>09:00 - 10:00 / 14:00 - 15:00 / 19:00 - 20:00</td>
+    <td>10:30 - 11:30 / 17:00 - 18:00 / 20:30 - 21:30</td>
+    <td>08:00 - 09:00 / 13:00 - 14:00 / 18:00 - 19:00</td>
+  </tr>
+  <tr>
+    <td>Viernes</td>
+    <td>08:00 - 22:30</td>
+    <td>09:00 - 10:00 / 14:00 - 15:00 / 19:00 - 20:00</td>
+    <td>10:30 - 11:30 / 17:00 - 18:00 / 20:30 - 21:30</td>
+    <td>08:00 - 09:00 / 13:00 - 14:00 / 18:00 - 19:00</td>
+  </tr>
+  <tr>
+    <td>Sábado</td>
+    <td>09:00 - 22:30</td>
+    <td>10:00 - 11:00 / 16:00 - 17:00</td>
+    <td>11:30 - 12:30 / 18:00 - 19:00</td>
+    <td>09:00 - 10:00 / 17:00 - 18:00</td>
+  </tr>
+  <tr>
+    <td>Domingo</td>
+    <td>09:00 - 14:00</td>
+    <td>10:00 - 11:00</td>
+    <td>11:30 - 12:30</td>
+    <td>12:30 - 13:30</td>
+  </tr>
+  
+    </tbody>
+  </table>
+  
+</div>
+<div class="alerta-feriado">
+    <p>*horarios sujetos a modificacion por Feriados</p>
+</div>
+
+<script src="js/style.js"></script>
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu email" required>
+        <button type="button" class="button">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+    </div>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+</body>
+</html>

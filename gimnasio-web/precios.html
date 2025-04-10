@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GLADIADOR GYM</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/precios.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
+      <h1>GLADIADOR GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        
+        <li class="has-submenu">
+          <a href="#">Servicios</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+            <a href="precios.html">Precios</a>
+          </div>
+        </li>
+  
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog Fitness</a></li>
+      </ul>
+    </nav>
+    <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
+  </header>
+
+
+  <section class="precios">
+    <h2>Compará nuestros Planes</h2>
+  
+    <!-- Toggle mensual/anual -->
+     <div class="planes-container">
+    <div class="toggle-container">
+      <input type="checkbox" id="toggle" hidden>
+      <label for="toggle" class="switch">
+        <span class="option">Mensual</span>
+        <span class="slider"></span>
+        <span class="option">Anual</span>
+      </label>
+    </div>
+  
+    <!-- Tabla de precios -->
+    <div class="tabla-precios">
+      <div class="plan basico">
+        <h3>Básico</h3>
+        <div class="ahorro">¡Ahorra 15% con el plan anual!</div>
+        <p class="precio mensual">AR$ 5000</p>
+        <p class="precio anual">AR$ 51000</p>
+        <ul>
+          <li class="tooltip">Acceso a sala de musculación
+            <span class="tooltip-text">Incluye pesas, máquinas y zona de cardio</span>
+          </li>
+          <li> 3 días por semana</li>
+          <li>1 clase semanal</li>
+          <li>Sin entrenador</li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+  
+      <div class="plan intermedio recomendado-mensual">
+        <h3>Intermedio</h3>
+        <div class="ahorro ahorro-intermedio">¡Ahorra 20% con el plan anual!</div>
+        <p class="precio mensual">AR$ 8500</p>
+        <p class="precio anual">AR$ 81600</p>
+        <ul>
+          <li class="tooltip">Acceso total
+            <span class="tooltip-text">Musculación, cardio y salón de clases</span>
+          </li>
+          <li> 5 días por semana</li>
+          <li>3 clases semanales</li>
+          <li class="tooltip">Entrenador compartido
+            <span class="tooltip-text">Sesiones guiadas grupales</span>
+          </li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+  
+      <div class="plan premium recomendado-anual">
+        <h3>Premium</h3>
+        <div class="ahorro ahorro-premium">¡Ahorra 25% con el plan anual!</div>
+        <p class="precio mensual">AR$ 12000</p>
+        <p class="precio anual">AR$ 108000</p>
+        <ul>
+            <li class="tooltip">Acceso ilimitado
+                <span class="tooltip-text">Acceso libre a todas las areas </span>
+            </li>
+            <li> Pase libre todo el mes</li>
+            <li class="tooltip">Clases ilimitadas
+                <span class="tooltip-text">Acceso libre a todas las clases </span>
+            </li>
+          <li class="tooltip">Entrenador personal
+            <span class="tooltip-text">Puedes elegir al entrenador que más se ajuste a tus necesidades </span>
+          </li>
+        </ul>
+        <button>Elegir</button>
+      </div>
+    </div>
+    </div>
+    </section>
+  
+ 
+  <div style="height: 3rem;"></div>
+
+  <script src="js/style.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu email" required>
+        <button type="button" class="button">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+    </div>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+</body>
+</html>

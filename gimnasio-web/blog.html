@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GLADIADOR GYM - Blog</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <nav class="mega-menu">
+        <div class="logo">
+        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
+      <h1>GLADIADOR GYM</h1>
+        </div>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li class="has-submenu">
+          <a href="#">Servicios</a>
+          <div class="submenu">
+            <a href="clases.html">Clases</a>
+            <a href="entrenadores.html">Entrenadores</a>
+            <a href="precios.html">Precios</a>
+          </div>
+        </li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="blog.html">Blog Fitness</a></li>
+      </ul>
+    </nav>
+    <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
+  </header>
+
+ 
+ <section class="blog">
+    <h2>Blog Fitness</h2>
+    <p>Consejos, rutinas y motivación para tu entrenamiento.</p>
+  <input type="radio" id="all" name="tag" checked>
+  <input type="radio" id="nutricion" name="tag">
+  <input type="radio" id="entrenamiento" name="tag">
+  <input type="radio" id="motivacion" name="tag">
+  <input type="radio" id="recuperacion" name="tag">
+
+  <section class="blog-filtros">
+    <div class="tags">
+      <label for="all">Todos</label>
+      <label for="nutricion">Nutrición</label>
+      <label for="entrenamiento">Entrenamiento</label>
+      <label for="motivacion">Motivación</label>
+      <label for="recuperacion">Recuperación</label>
+    </div>
+
+    <div class="grid-container">
+
+        <!-- Nutrición -->
+        <article class="card nutricion">
+            <h2>Consejos de Nutrición</h2>
+            <p>Alimentos para potenciar tu rendimiento.</p></article>
+        <!-- Entrenamiento -->
+        <article class="card entrenamiento">
+            <h2>Rutina de Piernas</h2>
+            <p>Ejercicios para fuerza y resistencia.</p></article>
+        <!-- Motivación -->
+        <article class="card motivacion">
+            <h2>Motivación Diaria</h2>
+            <p>Frases para no perder el enfoque.</p></article>
+        <!-- Recuperación -->
+        <article class="card recuperacion">
+            <h2>Importancia del descanso</h2>
+            <p>Cuánto dormir según tu entrenamiento.</p></article>
+        <!-- Nutrición -->
+        <article class="card nutricion">
+            <h2>Superalimentos</h2>
+            <p>Beneficios de la chía, quinoa y más.</p></article>
+        <!-- Entrenamiento -->
+        <article class="card entrenamiento">
+            <h2>Entrena en casa</h2>
+            <p>Sin equipo, sin excusas.</p></article>
+        <!-- Motivación -->
+        <article class="card motivacion">
+            <h2>Historias reales</h2>
+            <p>Casos de éxito que inspiran.</p></article>
+        <!-- Recuperación -->
+        <article class="card recuperacion">
+            <h2>Estiramientos post entrenamiento</h2>
+            <p>Evita lesiones y mejora tu flexibilidad.</p></article>
+        <!-- Nutrición -->
+        <article class="card nutricion">
+            <h2>Plan de comidas</h2>
+            <p>Ideas saludables y balanceadas para tu semana.</p></article>
+        <!-- Entrenamiento -->
+        <article class="card entrenamiento">
+            <h2>HIIT en 15 minutos</h2>
+            <p>Quema grasa rápido con este circuito.</p></article>
+        <!-- Motivación -->
+        <article class="card motivacion">
+            <h2>Cómo crear hábito</h2>
+            <p>Trucos para mantener la constancia.</p></article>
+        <!-- Recuperación -->
+        <article class="card recuperacion">
+            <h2>Alimentos para recuperar</h2>
+            <p>Qué comer después de entrenar.</p></article>
+    
+      </div>
+  </section>
+    </section>
+
+  <!-- COMENTARIOS -->
+  <section class="comentarios">
+    <h3>Comentarios</h3>
+  
+    <div class="comentario">
+      <div class="avatar avatar-lucia" data-inicial="L"></div>
+      <p><strong>Lucia:</strong> Excelente artículo sobre entrenamiento!</p>
+    </div>
+  
+    <div class="comentario">
+      <div class="avatar avatar-mateo" data-inicial="M"></div>
+      <p><strong>Martín:</strong> Me encantaron los tips de nutrición.</p>
+    </div>
+  
+    <div class="comentario">
+      <div class="avatar avatar-carla" data-inicial="C"></div>
+      <p><strong>Carla:</strong> Muy útil lo de los superalimentos, ¡gracias!</p>
+    </div>
+  
+    <div class="comentario">
+      <div class="avatar avatar-alan" data-inicial="A"></div>
+      <p><strong>Alan:</strong> El artículo de motivación me inspiró a volver al gym 💪</p>
+    </div>
+  
+    <div class="comentario">
+      <div class="avatar avatar-esteban" data-inicial="E"></div>
+      <p><strong>Esteban:</strong> El blog sobre descanso fue justo lo que necesitaba.</p>
+    </div>
+  </section>
+
+  <script src="js/blog.js"></script>
+    <script src="js/style.js"></script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="newsletter">
+      <h3>Suscribite al newsletter</h3>
+      <form  >
+        <input type="email" placeholder="Tu email" required>
+        <button type="button" class="button">Suscribirme</button>
+      </form>
+    </div>
+
+    <div class="redes">
+      <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+      <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
+      <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
+    </div>
+
+    <div class="mapa">
+      <iframe src="https://www.google.com/maps/embed?..." style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+  </footer>
+
+</body>
+</html>
