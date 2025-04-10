@@ -116,10 +116,12 @@
 
   .logo h1 {
     margin-top: -20px;
-    font-size: 4rem; /* Cambiá este valor según el tamaño que prefieras */
-    font-weight: bold; /* Opcional: para que se vea más fuerte */
-    letter-spacing: 1px; /* Opcional: más espaciado entre letras */
-    text-transform: uppercase; /* Opcional: todo en mayúsculas */
+    font-size: 4rem; 
+    font-weight: bold; 
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+    word-wrap: break-word; 
+  white-space: normal;
   }
   
   nav ul {
@@ -510,6 +512,58 @@
     height: 200px;
     border: none;
   }
+  @media (max-width: 768px) {
+    .logo h1 {
+      font-size: 2.5rem;  
+      text-align: center; 
+    }
+  
+   
+    .logo {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .logo img {
+      width: 100px; 
+      height: 100px;
+    }
+  
+    
+    nav ul {
+      flex-direction: column; 
+      gap: 1rem;
+    }
+  
+    nav a {
+      padding: 1rem; 
+    }
+  
+
+    .redes img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    nav ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr; 
+      gap: 1rem;
+      padding: 1rem 0;
+    }
+  
+    nav ul li {
+      width: 100%; 
+    }
+  
+    #modo-toggle {
+      grid-column: span 2; 
+      justify-self: center; 
+    }
+  }
 
   @media (max-width: 768px) {
     footer {
@@ -523,7 +577,7 @@
     }
     .mapa iframe {
         width: 100%;
-        height: 300px; /* cuadrado */
+        height: 300px; 
       }
   }
 
