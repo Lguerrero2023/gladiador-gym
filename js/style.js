@@ -5,3 +5,4 @@ toggleBtn.addEventListener('click', () => {
     ? 'DARK MODE OFF ☀️'
     : 'DARK MODE ON 🌙';
 });
+

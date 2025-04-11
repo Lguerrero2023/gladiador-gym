@@ -154,7 +154,7 @@
     color: #000;
   }
   
-  /* En modo oscuro: más contraste */
+
   body.dark-mode nav ul li a {
     background-color: rgba(255, 255, 255, 0.08);
     color: #fff;
@@ -550,7 +550,7 @@
   @media (max-width: 768px) {
     nav ul {
       display: grid;
-      grid-template-columns: 1fr 1fr; 
+      grid-template-columns: 1fr 1fr;
       gap: 1rem;
       padding: 1rem 0;
     }
