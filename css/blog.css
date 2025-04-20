@@ -233,33 +233,130 @@ input#all:checked ~ .blog-filtros .tags label[for="all"],
   }
   
   .comentario {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.comentario.destacado {
+  border: 2px solid var(--highlight);
+  background-color: #fffbe6;
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6);
+  transition: all 0.3s ease;
+}
+
+/* Estilos generales del modo oscuro */
+body.dark-mode .comentarios {
+  background-color: #333; /* Fondo oscuro para la sección de comentarios */
+  color: var(--text-color);
+}
+
+body.dark-mode .comentario {
+  background-color: #2b2b2b; /* Fondo oscuro para los comentarios */
+  border: 1px solid #444;  /* Bordes más suaves */
+}
+
+body.dark-mode .comentario.destacado {
+  background-color: #3a3205; /* Fondo oscuro destacado */
+  border-color: #ffc107;  /* Borde amarillo para comentarios destacados */
+  box-shadow: 0 0 10px rgba(255, 204, 0, 0.6); /* Resplandor amarillo */
+}
+
+body.dark-mode .comentario .avatar {
+  background-color: #ff9800; /* Avatar en color naranja brillante para destacar */
+}
+
+body.dark-mode .comentario .acciones-comentario button {
+  color: #fff; /* Texto blanco en botones */
+  border: 1px solid #444; /* Bordes más oscuros */
+  background-color: #555; /* Fondo oscuro para los botones */
+}
+
+body.dark-mode .comentario .acciones-comentario button:hover {
+  background-color: #666; /* Cambio al pasar el ratón */
+}
+
+body.dark-mode .comentario .respuesta-area {
+  background-color: #444; /* Fondo oscuro para el área de respuesta */
+  color: var(--text-color);
+}
+
+body.dark-mode .comentario .respuesta-area textarea {
+  background-color: #555; /* Fondo oscuro del textarea */
+  color: var(--text-color);
+  border: 1px solid #666; /* Borde más suave */
+}
+
+body.dark-mode .comentario .respuesta-enviada {
+  color: #1da724; /* Color verde brillante para la respuesta enviada */
+  background-color: #555;
+}
+
+body.dark-mode .comentario .avatar-lucia { background-color: #4caf50; }
+body.dark-mode .comentario .avatar-mateo { background-color: #2196f3; }
+body.dark-mode .comentario .avatar-carla { background-color: #ff9800; }
+body.dark-mode .comentario .avatar-alan { background-color: #9c27b0; }
+body.dark-mode .comentario .avatar-esteban { background-color: #f44336; }
+  
+.respuesta {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #f4f4f4;
+  border-left: 4px solid #28a745;
+  font-size: 14px;
+}
+
+body.dark-mode .respuesta {
+  background-color: #444; /* Fondo oscuro para la respuesta */
+  color: var(--text-color);
+  border-left: 4px solid #28a745; /* Borde verde para la respuesta */
+}
+
+  .comentario.respuesta {
+    margin-left: 3rem;
+    background-color: #f0f0f0;
+    padding: 0.8rem;
+    border-radius: 5px;
+    font-size: 0.95rem;
   }
+
+  /* Estilos para las áreas de respuesta */
+.respuesta-area {
+  margin-top: 10px;
+}
+
+.respuesta-area textarea {
+  width: 100%;
+  height: 100px;
+}
+
+.respuesta-enviada {
+  margin-top: 5px;
+  font-size: 12px;
+  color: green;
+  font-weight: bold;
+}
   
   .avatar {
     width: 50px;
     height: 50px;
+    background-color: #ffa500;
     border-radius: 50%;
-    background: var(--primary);
-    color: white;
-    font-weight: bold;
     display: flex;
-    align-items: center;
     justify-content: center;
-    font-size: 1rem;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
     position: relative;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    flex-shrink: 0;
+    text-transform: uppercase;
   }
   
   .avatar::before {
     content: attr(data-inicial);
     position: absolute;
-    font-size: 1.1rem;
-    font-weight: bold;
+    font-size: 1.2rem;
   }
 
 .avatar-lucia { background: #4caf50; }
@@ -267,3 +364,4 @@ input#all:checked ~ .blog-filtros .tags label[for="all"],
 .avatar-carla { background: #ff9800; }
 .avatar-alan { background: #9c27b0; }
 .avatar-esteban { background: #f44336; }
+

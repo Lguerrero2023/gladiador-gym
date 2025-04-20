@@ -109,73 +109,76 @@
   }
   
  
-  /* Galería estilo Masonry */
+ /* Galería estilo Masonry */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Columna adaptativa */
+  gap: 1rem; /* Espacio entre las imágenes */
+  justify-items: center; /* Centra las imágenes en cada celda */
+  grid-auto-rows: 200px; /* Altura automática de las filas para una mejor disposición de las imágenes */
+}
+
+.clase {
+  position: relative; 
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.clase img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
+  transition: transform 0.4s ease;
+}
+
+.clase:hover img {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  padding: 0.5rem;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.overlay h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.overlay p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.clase:hover .overlay {
+  transform: translateY(0); /* Desplazamiento del overlay cuando se pasa el mouse */
+}
+
+/* Responsivo: dos columnas en pantallas pequeñas */
+@media (max-width: 768px) {
   .galeria {
-    column-count: 3;
-    column-gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Ajustar a dos columnas */
   }
-  
-  .clase {
-    position: relative; 
-    break-inside: avoid;
-    margin-bottom: 1rem;
-    border-radius: 10px;
-    overflow: hidden;
-    background: #fff;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
-  .clase img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.4s;
-  }
-  
-  .clase:hover img {
-    transform: scale(1.1);
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0,0,0,0.6);
-    color: white;
-    width: 100%;
-    padding: 0.5rem;
-    text-align: center;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-    z-index: 1;
-  }
-  
-  .overlay h3 {
-    margin: 0;
-    font-size: 1.2rem;
-  }
-  
-  .overlay p {
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-  }
+}
 
-  .clase:hover .overlay {
-    transform: translateY(0);
+/* Responsivo: una columna en pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .galeria {
+    grid-template-columns: 1fr; /* Una sola columna */
   }
-
-  @media (max-width: 768px) {
-    .galeria {
-      column-count: 2;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .galeria {
-      column-count: 1;
-    }
-  }
+}
   
   /* Filtro seleccionado con sombreado (resaltado) */
   #todos:checked ~ .filtro-labels label[for="todos"],
@@ -226,14 +229,36 @@
     padding: 1rem;
     border: 1px solid #ccc;
     text-align: center;
-    background-color: var(--card-bg);
-    color: var(--text-color);
+    background-color: #fff;
+    color: #000;
     
   }
   
   .tabla-horarios th {
     background-color: #3e3b3b;
     color: #fff;
+  }
+
+   /* 🌙 Modo oscuro */
+   body.dark-mode table {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+  }
+  
+  body.dark-mode table th,
+  body.dark-mode table td {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: #444;
+  }
+  
+  body.dark-mode thead.table-dark {
+    background-color: #333 !important;
+    color: #ffa500 !important; /* o var(--highlight) */
+  }
+  
+  body.dark-mode .table-hover tbody tr:hover {
+    background-color: #2d2d2d;
   }
   
   /* Responsive */
@@ -269,4 +294,15 @@
   body.dark-mode .alerta-feriado {
     background-color: #d5d3d3; 
     color: #f80000; 
+  }
+
+   /* Íconos en encabezados */
+   .tabla-horarios th div {
+    display: block;
+    text-align: center;
+  }
+
+  .tabla-horarios th i {
+    display: block;
+    margin-bottom: 4px;
   }

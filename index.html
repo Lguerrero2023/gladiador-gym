@@ -5,112 +5,223 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GLADIADOR GYM</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- HEADER -->
   <header>
-    <nav class="mega-menu">
-        <div class="logo">
-        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
-      <h1>GLADIADOR GYM</h1>
-        </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li class="has-submenu">
-          <a href="#">Servicios</a>
-          <div class="submenu">
-            <a href="clases.html">Clases</a>
-            <a href="entrenadores.html">Entrenadores</a>
-            <a href="precios.html">Precios</a>
+    <!-- NAVBAR + BANNER -->
+    <div class="position-relative">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar" style="background-image: url('assets/img/banner2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="assets/img/logo.jpg" alt="Logo" class="rounded-circle shadow img-fluid d-none d-md-block" width="100" height="100">
+            <img src="assets/img/logo.jpg" alt="Logo" class="rounded-circle shadow img-fluid d-md-none" width="70" height="70">
+            <h1 class="fs-1 fw-bold text-uppercase m-0">GLADIADOR GYM</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Servicios</a>
+                <ul class="dropdown-menu py-0 px-0" style="min-width: 100px; width:200px;">
+                  <li><a class="dropdown-item bg-warning text-white py-1 px-3" href="clases.html">Clases</a></li>
+                  <li><a class="dropdown-item bg-warning text-white py-1 px-3" href="entrenadores.html">Entrenadores</a></li>
+                  <li><a class="dropdown-item bg-warning text-white py-1 px-3" href="precios.html">Precios</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded" href="blog.html">Blog Fitness</a>
+              </li>
+            </ul>
+  
+            <button id="modo-toggle" class="btn btn-outline-light ms-3">DARK MODE ON 🌙</button>
           </div>
-        </li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="blog.html">Blog Fitness</a></li>
-      </ul>
-      <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
-    </nav>
+        </div>
+      </nav>
+  
+      <!-- BANNER -->
+      <div class="position-relative text-white text-center d-flex flex-column justify-content-center align-items-center pt-5 pb-0" style="height: 100px;">
+        <h2 class="display-4 fw-bold text-uppercase">¡Entrena como un Gladiador!</h2>
+        <p class="lead">Fuerza, disciplina y resultados reales</p>
+      </div>
+    </div>
   </header>
 
   <!-- HERO -->
-  <section class="hero">
-    <!-- <div class="video-bg">
-        <iframe 
-          src="https://www.youtube.com/embed/WWbVthx_7e0?autoplay=1&mute=1&loop=1&playlist=WWbVthx_7e0"
-          frameborder="0"
-          allow="autoplay; encrypted-media"
-          allowfullscreen>
-        </iframe>
-      </div> -->
-     <video autoplay loop>
-      <source src="assets/video/entrenamiento.mp4" type="video/mp4">
-      Tu navegador no soporta el video.
-    </video> 
-    <div class="overlay">
-        <div class="overlay-texto">
-            <h2>¡Entrená con los mejores!</h2>
-            <p>Motivación, fuerza y disciplina</p>
-          </div>
+<section class="hero position-relative vh-100 overflow-hidden">
+  <!-- Video de fondo -->
+  <video class="video-fondo position-absolute w-100 h-100 top-0 start-0 object-fit-cover" autoplay muted loop playsinline>
+    <source src="assets/video/entrenamiento.mp4" type="video/mp4">
+    Tu navegador no soporta el video.
+  </video>
+
+  <!-- Overlay con texto dinámico -->
+  <div class="overlay position-absolute w-100 h-100 top-0 start-0 d-flex flex-column justify-content-center align-items-center text-white text-center px-3">
+    <div class="overlay-texto">
+      <h2 class="display-4 fw-bold">¡Entrená con los mejores!</h2>
+      <p class="lead texto-dinamico">Motivación, fuerza y disciplina</p>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- CLASES DESTACADAS -->
-  <section class="clases-destacadas">
-    <h2>Nuestras Clases</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="assets/img/yoga.jpg" alt="Clase de Yoga">
-        <h3>Yoga</h3>
-      </div>
-      <div class="card">
-        <img src="assets/img/crossfit.jpg" alt="Clase de Crossfit">
-        <h3>Crossfit</h3>
-      </div>
-      <div class="card">
-        <img src="assets/img/boxeo.jpg" alt="Clase de Boxeo">
-        <h3>Boxeo</h3>
+<section class="clases-destacadas">
+  <h2><i class="bi bi-star-fill text-warning"></i> Nuestras Clases</h2>
+  <div class="cards d-flex justify-content-center flex-wrap gap-5">
+    
+    <div class="card shadow-sm">
+      <img src="assets/img/yoga.jpg" alt="Clase de Yoga" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title"><i class="bi bi-flower2 text-danger"></i> Yoga</h3>
       </div>
     </div>
-  </section>
+
+    <div class="card shadow-sm">
+      <img src="assets/img/crossfit.jpg" alt="Clase de Crossfit" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title"><i class="bi bi-lightning-fill text-warning"></i> Crossfit</h3>
+      </div>
+    </div>
+
+    <div class="card shadow-sm">
+      <img src="assets/img/boxeo.jpg" alt="Clase de Boxeo" class="card-img-top">
+      <div class="card-body">
+        <h3 class="card-title"><i class="bi bi-emoji-angry-fill text-danger"></i> Boxeo</h3>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- CONTADOR ANIMADO -->
-  <section class="contador">
-    <div><span class="numero">500+</span><p>Socios Satisfechos</p></div>
-    <div><span class="numero">10</span><p>Años de Experiencia</p></div>
-    <div><span class="numero">20</span><p>Entrenadores Certificados</p></div>
-  </section>
+<section class="contador">
+  <div><span class="numero" data-numero="500">0</span><p>Socios Satisfechos</p></div>
+  <div><span class="numero" data-numero="10">0</span><p>Años de Experiencia</p></div>
+  <div><span class="numero" data-numero="20">0</span><p>Entrenadores Certificados</p></div>
+</section>
 
   <!-- TESTIMONIOS -->
-  <section class="testimonios">
+  <section class="testimonios container my-5">
     <h2>Lo que dicen nuestros clientes</h2>
-    <div class="carrusel-slider">
-        <div class="testimonio">"Excelente atención y resultados" - <strong>Ana</strong></div>
-        <div class="testimonio">"Entrenamientos personalizados de verdad" - <strong>Juan</strong></div>
-        <div class="testimonio">"El mejor gimnasio de la zona" - <strong>Lucía</strong></div>
+  
+    <div id="carouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="testimonio">
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            "Excelente atención y resultados" - <strong>Ana</strong>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonio">
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            "Entrenamientos personalizados de verdad" - <strong>Juan</strong>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="testimonio">
+            <div class="estrellas">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            "El mejor gimnasio de la zona" - <strong>Lucía</strong>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <script src="js/style.js"></script>
   
   <!-- FOOTER -->
-  <footer>
-    <div class="newsletter">
-      <h3>Suscribite al newsletter</h3>
-      <form  >
-        <input type="email" placeholder="Tu email" required>
-        <button type="button" class="button">Suscribirme</button>
-      </form>
-    </div>
-
-    <div class="redes">
-      <a href="#"><img src="assets/icons/Facebook.svg" alt="Facebook"></a>
-      <a href="#"><img src="assets/icons/Instagram.svg" alt="Instagram"></a>
-      <a href="#"><img src="assets/icons/Twitter.svg" alt="Twitter"></a>
-    </div>
-
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+  <footer class="bg-dark text-white py-4">
+    
+      <div class="row g-4">
+        <!-- Newsletter -->
+        <div class="col-md-4">
+          <h5>Suscribite al newsletter</h5>
+          <form id="newsletter-form" novalidate>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Tu email" required>
+              <div class="invalid-feedback">
+                Ingresá un email válido.
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary w-100 position-relative">
+              <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true" id="form-spinner"></span>
+              <span id="btn-text">Suscribirme</span>
+            </button>
+          </form>
+        </div>
+  
+        <!-- Redes -->
+        <div class="col-md-4 text-center">
+          <h5>Siguenos</h5>
+          <div class="d-flex justify-content-center gap-3 mt-2">
+            <a href="#" class="social-icon facebook text-white fs-3" data-bs-toggle="tooltip" title="Seguinos en Facebook">
+              <i class="bi bi-facebook"></i>
+            </a>
+            <a href="#" class="social-icon instagram text-white fs-3" data-bs-toggle="tooltip" title="Síguenos en Instagram">
+              <i class="bi bi-instagram"></i>
+            </a>
+            <a href="#" class="social-icon twitter text-white fs-3" data-bs-toggle="tooltip" title="Síguenos en Twitter">
+              <i class="bi bi-twitter"></i>
+            </a>
+          </div>
+        </div>
+  
+       <!-- Mapa -->
+<div class="col-md-4">
+  <h5>Dónde estamos</h5>
+  <div class="ratio ratio-4x3">
+    <!-- Iframe de Google Maps -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.798383681252!2d-58.4428293!3d-34.7788005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32c1aeab8e827%3A0xd914200e3cf31430!2sGladiador+Gym!5e0!3m2!1ses-419!2sar!4v1611074806753!5m2!1ses-419!2sar"
+      width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
+    </iframe>
+  </div>
+</div>
+  
   </footer>
 
 </body>

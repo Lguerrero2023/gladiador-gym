@@ -6,33 +6,71 @@
   <title>GLADIADOR GYM</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/precios.css">
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <nav class="mega-menu">
-        <div class="logo">
-        <img src="assets/img/logo.jpg" alt="Logo GLADIADOR GYM" class="logo">
-      <h1>GLADIADOR GYM</h1>
-        </div>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        
-        <li class="has-submenu">
-          <a href="#">Servicios</a>
-          <div class="submenu">
-            <a href="clases.html">Clases</a>
-            <a href="entrenadores.html">Entrenadores</a>
-            <a href="precios.html">Precios</a>
-          </div>
-        </li>
+   <!-- HEADER -->
+   <header>
+    <!-- NAVBAR + BANNER -->
+    <div class="position-relative">
+      <!-- NAVBAR -->
+      <nav class="navbar navbar-expand-lg navbar-dark custom-navbar" style="background-image: url('assets/img/banner2.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <div class="container-fluid">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+            <img src="assets/img/logo.jpg" alt="Logo" class="rounded-circle shadow img-fluid d-none d-md-block" width="100" height="100">
+            <img src="assets/img/logo.jpg" alt="Logo" class="rounded-circle shadow img-fluid d-md-none" width="70" height="70">
+            <h1 class="fs-1 fw-bold text-uppercase m-0">GLADIADOR GYM</h1>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+            <span class="navbar-toggler-icon"></span>
+          </button>
   
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="blog.html">Blog Fitness</a></li>
-      </ul>
-    </nav>
-    <button id="modo-toggle" aria-label="Alternar Modo Oscuro 🌙">DARK MODE ON 🌙</button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Servicios</a>
+                <ul class="dropdown-menu py-0 px-0" style="min-width: 100px; width:200px;">
+                  <li><a class="dropdown-item bg-warning text-white py-1 px-3" href="clases.html">Clases</a></li>
+                  <li><a class="dropdown-item bg-warning text-white py-1 px-3" href="entrenadores.html">Entrenadores</a></li>
+                  <li><a class="dropdown-item bg-warning text-white py-1 px-3" href="precios.html">Precios</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded" href="contacto.html">Contacto</a>
+              </li>
+              <li class="nav-item" style="margin-top: -10px;">
+                <a class="nav-link bg-warning text-white px-3 py-2 rounded" href="blog.html">Blog Fitness</a>
+              </li>
+            </ul>
+  
+            <button id="modo-toggle" class="btn btn-outline-light ms-3">DARK MODE ON 🌙</button>
+          </div>
+        </div>
+      </nav>
+  
+      <!-- BANNER -->
+      <div class="position-relative text-white text-center d-flex flex-column justify-content-center align-items-center pt-5 pb-0" style="height: 100px;">
+        <h2 class="display-4 fw-bold text-uppercase">¡Entrena como un Gladiador!</h2>
+        <p class="lead">Fuerza, disciplina y resultados reales</p>
+      </div>
+    </div>
   </header>
 
 
@@ -58,8 +96,8 @@
         <p class="precio mensual">AR$ 5000</p>
         <p class="precio anual">AR$ 51000</p>
         <ul>
-          <li class="tooltip">Acceso a sala de musculación
-            <span class="tooltip-text">Incluye pesas, máquinas y zona de cardio</span>
+          <li data-bs-toggle="tooltip" data-bs-placement="top" title="Incluye pesas, máquinas y zona de cardio">
+            Acceso a sala de musculación
           </li>
           <li> 3 días por semana</li>
           <li>1 clase semanal</li>
@@ -74,8 +112,8 @@
         <p class="precio mensual">AR$ 8500</p>
         <p class="precio anual">AR$ 81600</p>
         <ul>
-          <li class="tooltip">Acceso total
-            <span class="tooltip-text">Musculación, cardio y salón de clases</span>
+          <li data-bs-toggle="tooltip" data-bs-placement="top" title="Musculación, cardio y salón de clases">
+            Acceso total
           </li>
           <li> 5 días por semana</li>
           <li>3 clases semanales</li>
@@ -92,12 +130,10 @@
         <p class="precio mensual">AR$ 12000</p>
         <p class="precio anual">AR$ 108000</p>
         <ul>
-            <li class="tooltip">Acceso ilimitado
-                <span class="tooltip-text">Acceso libre a todas las areas </span>
-            </li>
+            
             <li> Pase libre todo el mes</li>
-            <li class="tooltip">Clases ilimitadas
-                <span class="tooltip-text">Acceso libre a todas las clases </span>
+            <li data-bs-toggle="tooltip" data-bs-placement="top" title="Acceso libre a todas las clases">
+              Clases ilimitadas
             </li>
           <li class="tooltip">Entrenador personal
             <span class="tooltip-text">Puedes elegir al entrenador que más se ajuste a tus necesidades </span>
@@ -108,32 +144,121 @@
     </div>
     </div>
     </section>
+
+    <div class="container mt-5">
+      <h3 class="text-center mb-4"><i class="bi bi-table"></i> Comparativa rápida de planes</h3>
+      <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center" id="tabla-precios">
+          <thead class="table-dark">
+            <tr>
+              <th></th>
+              <th><i class="bi bi-star"></i> Básico</th>
+              <th><i class="bi bi-star-fill text-success"></i> Intermedio</th>
+              <th><i class="bi bi-gem text-purple"></i> Premium</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr >
+              <th>Acceso</th>
+              <td>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Incluye pesas, máquinas y zona de cardio">
+                  Musculación
+                </li></td>
+              <td>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Musculación, cardio y salón de clases">
+                  Completo
+                </li></td>
+              <td>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" title="Acceso libre a todas las areas">
+                  Ilimitado
+                </li></td>
+            </tr>
+            <tr>
+              <th>Días por semana</th>
+              <td>3</td>
+              <td>5</td>
+              <td>7</td>
+            </tr>
+            <tr>
+              <th>Clases</th>
+              <td>1 semanal</td>
+              <td>3 semanales</td>
+              <td>Ilimitadas</td>
+            </tr>
+            <tr>
+              <th>Entrenador</th>
+              <td>No incluido</td>
+              <td>Compartido</td>
+              <td>Personal</td>
+            </tr>
+            <tr>
+              <th>Precio mensual</th>
+              <td>AR$ 5000</td>
+              <td>AR$ 8500</td>
+              <td>AR$ 12000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   
  
   <div style="height: 3rem;"></div>
 
   <script src="js/style.js"></script>
+  <script src="js/precios.js"></script>
 
   <!-- FOOTER -->
-  <footer>
-    <div class="newsletter">
-      <h3>Suscribite al newsletter</h3>
-      <form  >
-        <input type="email" placeholder="Tu email" required>
-        <button type="button" class="button">Suscribirme</button>
-      </form>
-    </div>
-
-    <div class="redes">
-        <a href="#"><img src="assets/icons/Facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="assets/icons/Instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="assets/icons/Twitter.svg" alt="Twitter"></a>
+  <footer class="bg-dark text-white py-4">
+    
+    <div class="row g-4">
+      <!-- Newsletter -->
+      <div class="col-md-4">
+        <h5>Suscribite al newsletter</h5>
+        <form id="newsletter-form" novalidate>
+          <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" placeholder="Tu email" required>
+            <div class="invalid-feedback">
+              Ingresá un email válido.
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 position-relative">
+            <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true" id="form-spinner"></span>
+            <span id="btn-text">Suscribirme</span>
+          </button>
+        </form>
       </div>
 
-    <div class="mapa">
-      <iframe src="https://www.google.com/maps/embed?..."style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-  </footer>
+      <!-- Redes -->
+      <div class="col-md-4 text-center">
+        <h5>Siguenos</h5>
+        <div class="d-flex justify-content-center gap-3 mt-2">
+          <a href="#" class="social-icon facebook text-white fs-3" data-bs-toggle="tooltip" title="Seguinos en Facebook">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="social-icon instagram text-white fs-3" data-bs-toggle="tooltip" title="Síguenos en Instagram">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="social-icon twitter text-white fs-3" data-bs-toggle="tooltip" title="Síguenos en Twitter">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+
+     <!-- Mapa -->
+<div class="col-md-4">
+<h5>Dónde estamos</h5>
+<div class="ratio ratio-4x3">
+  <!-- Iframe de Google Maps -->
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.798383681252!2d-58.4428293!3d-34.7788005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32c1aeab8e827%3A0xd914200e3cf31430!2sGladiador+Gym!5e0!3m2!1ses-419!2sar!4v1611074806753!5m2!1ses-419!2sar"
+    width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy">
+  </iframe>
+</div>
+</div>
+
+</footer>
 
 </body>
 </html>

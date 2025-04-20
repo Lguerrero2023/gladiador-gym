@@ -167,17 +167,19 @@ body.dark-mode #toggle:checked ~ .switch .option:last-child {       /* Anual act
     width: 250px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
+    z-index: 1;
   }
+
+  .plan:hover {
+  z-index: 10;
+}
 
   body.dark-mode .plan {
     background: #797676;
     color: #000000;
   }
   
-  .plan:hover {
-    transform: scale(1.03);
-    z-index: 2;
-  }
+ 
 
   .plan:hover .ahorro {
     box-shadow:
@@ -363,3 +365,13 @@ body.dark-mode #toggle:checked ~ .switch .option:last-child {       /* Anual act
     transform: translateY(0);
   }
 
+  /* Estilo para la fila resaltada */
+.highlight-row {
+  background-color: #d61717 !important; /* color de fondo amarillito */
+}
+
+/* Estilo para la columna resaltada */
+.highlight-col {
+  background-color: #cae266 !important; /* gris suave */
+}
+  
